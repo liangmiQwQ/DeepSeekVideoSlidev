@@ -1,0 +1,39 @@
+/* Modified from Oluwasetemi/react-note */
+.dark #slide-content {
+ background: 
+  radial-gradient(circle at 0% 100%, rgba(0,255,255,0.1) 0%, transparent 50%),
+  radial-gradient(circle at 0% 100%, rgba(0,255,255,0.15) 0%, transparent 30%),
+  linear-gradient(to top right, #0a0a0a, #001011);
+}
+
+.slidev-vclick-target {
+  transition:
+    opacity 500ms ease,
+    filter 200ms ease,
+}
+
+.slidev-vclick-hidden {
+  opacity: 0;
+  pointer-events: none;
+  filter: blur(3px);
+}
+
+.fade-out-leave-active {
+  transition:
+    opacity calc(var(--slidev-transition-duration) * 0.6) ease-out,
+    filter 200ms ease;
+}
+
+.fade-out-enter-active {
+  transition:
+    opacity calc(var(--slidev-transition-duration) * 0.8) ease-in,
+    filter 200ms ease;
+  transition-delay: calc(var(--slidev-transition-duration) * 0.6);
+}
+
+
+.fade-out-enter-from,
+.fade-out-leave-to {
+  opacity: 0;
+  filter: blur(5px);
+} 
